@@ -1,0 +1,47 @@
+### GET POSTS
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ29ubm9yIiwicGFzc3dvcmQiOiIkMmIkMTAkZ00wb1N5cFZCNE44UU1MWnB4NFVjLmUwMnJ5Y0FmTkphRUNILkxvNmQ4dExJLlRkaUtETFMiLCJpYXQiOjE1OTExMjQxMjIsImV4cCI6MTU5MTEyNDE1Mn0.VEC9FkmIdNJby_o7yHsWIh2P7Ga8xHBVXlrhN007S44
+
+### REFRESH TOKEN
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTU5MTEyMjQ3Mn0.PCR1AL5T4RbzSWb1EQ9F6Ci0kORIwvBh8PWaFK78M7Q"
+}
+
+
+### LOGIN
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "Connor",
+    "password": "passwor"
+}
+
+### LOGOUT
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTU5MTEyMjQ3Mn0.PCR1AL5T4RbzSWb1EQ9F6Ci0kORIwvBh8PWaFK78M7Q"
+}
+
+### GET USERS
+
+GET http://localhost:4000/users
+
+
+### POST USERS
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "name": "Connor",
+    "password": "password"
+}
